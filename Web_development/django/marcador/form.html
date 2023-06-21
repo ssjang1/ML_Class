@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+{% block explain_contents %}
+<div align="center">
+
+  <div style="width:40%">
+    <h1>{% if create %}북마크 생성{% else %}북마크 편집{% endif %}</h1>
+    {% if create %}
+      {% url "marcador:marcador_bookmark_create" as action_url %}
+    {% else %}
+      {% url "marcador:marcador_bookmark_edit" pk=form.instance.pk as action_url %}
+    {% endif %}
+    <form action="{{ action_url }}" method="post" accept-charset="utf-8">
+      {% csrf_token %}
+      <h3>
+        {{ form.as_p }}
+        <p><input type="submit" class="btn btn-default" value="Save"></p>
+      </h3>
+    </form>
+  </div>
+</div>
+
+{% endblock explain_contents %}
