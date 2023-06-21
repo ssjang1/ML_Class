@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>자기소개 성식장</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+
+
+
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+		<div class="container-fluid">
+			<ul class="navbar-nav">
+				<li class="nav-item"><a class="nav-link" href="#section1">신상정보</a>
+				</li>
+				<li class="nav-item"><a class="nav-link" href="#section2">취미</a>
+				</li>
+				<li class="nav-item"><a class="nav-link" href="#section3">발자취</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<div id="section1" class="container-fluid bg-success text-white"
+		style="padding: 100px 20px;">
+		<h1>신상정보</h1>
+		<div class="container mt-3">
+			<h2>안녕하세요</h2>
+			<p>제 신상정보는</p>
+			<div class="card" style="width: 400px">
+				<img class="card-img-top" src="images/selfintroduce.jpg"
+					alt="Card image" style="width: 100%">
+				<div class="card-body">
+					<h4 class="card-title" style="color:green">장성식</h4>
+					<p class="card-text" style="color:green">
+						나이:26 <br> 호랑이띠<br>성별:남<br>전공:천문학과
+					</p>
+					<a href="#" class="btn btn-primary">See Profile</a>
+				</div>
+			</div>
+			<br>
+		</div>
+
+		<div id="section2" class="container-fluid bg-warning"
+			style="padding: 100px 20px;">
+			<h1>Section 2</h1>
+			<!-- Carousel -->
+			<div class="container-fluid mt-3">
+				<h3>취미는</h3>
+				<p>자전거타기 영화보기 요리하기 입니다.</p>
+			</div>
+
+			<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+				<!-- Indicators/dots -->
+				<div class="carousel-indicators">
+					<button type="button" data-bs-target="#demo" data-bs-slide-to="0"
+						class="active"></button>
+					<button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+					<button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+				</div>
+
+				<!-- The slideshow/carousel -->
+				<div class="carousel-inner">
+					<div class="carousel-item active">
+						<img src="images/hobby1.png" alt="자전거" class="d-block"
+							style="width: 100%">
+					</div>
+					<div class="carousel-item">
+						<img src="images/hobby2.webp" alt="영화" class="d-block"
+							style="width: 100%">
+					</div>
+					<div class="carousel-item">
+						<img src="images/hobby3.jpg" alt="요리" class="d-block"
+							style="width: 100%">
+					</div>
+				</div>
+
+				<!-- Left and right controls/icons -->
+				<button class="carousel-control-prev" type="button"
+					data-bs-target="#demo" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon"></span>
+				</button>
+				<button class="carousel-control-next" type="button"
+					data-bs-target="#demo" data-bs-slide="next">
+					<span class="carousel-control-next-icon"></span>
+				</button>
+			</div>
+		</div>
+
+		<div id="section3" class="container-fluid bg-secondary text-white"
+			style="padding: 100px 20px;">
+			<h1>Section 3</h1>
+			<div class="container mt-3">
+				<h2>발자취</h2>
+				<p>지금까지 살아온 도시들</p>
+				<div class="alert alert-success">
+					<strong>남원</strong> 전라북도 남원에서 태어나 남원중앙초등학교,용성중학교,남원고등학교를 다니고 19살이 됨
+				</div>
+				<div class="alert alert-info">
+					<strong>대전</strong> 대학교에 진학하게 되면서 20살부터 21살까지 대전에 거주
+				</div>
+				<div class="alert alert-warning">
+					<strong>철원</strong> 3사단에 배치받아 22살부터 23살까지 철원에서 군복무
+				</div>
+				<div class="alert alert-danger">
+					<strong>다시 대전</strong> 대학교 졸업후 지금까지도 대전에서 거주중
+				</div>
+				<div class="alert alert-primary">
+					<strong>미래에는?</strong> 직장을 갖게 되면 그 지역에 살 예정
+				</div>
+			</div>
+		</div>
+		
+</body>
+</html>

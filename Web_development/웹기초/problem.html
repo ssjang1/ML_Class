@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+document.write("<table border=1>");
+for(k=1;k<=9;k+=3){
+	for(i=1;i<=9;i++){
+		document.write("<tr>");
+		for(j=k;j<=k+2;j++){
+			document.write("<td>");
+			document.write(j+" X "+i+" = " + j*i +" ");
+			document.write("</td>");
+		}
+		document.write("</tr>");
+	}
+}
+document.write("</table>");
+
+</script>
+</body>
+</html>

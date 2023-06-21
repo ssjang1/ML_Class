@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+#one {
+	display: none;
+}
+</style>
+</head>
+<body>
+	<h1>display 속성테스트</h1>
+	<button id="showBtn">눌러보셈</button>
+	<button id="hideBtn">없어져</button>
+	<p id="one">주(週) 최대 근로시간을 69시간으로 개편하는 방안을 추진 중인 정부가 노동계 반발에 직면한 가운데 여의도 금융권에선 금융감독원의 ‘워라밸(일과 삶의 균형)’이 주목받고 있다. 금감원 직원들은 주당 평균 추가근무 시간이 2.6시간에 불과하고, ‘열정페이’ 없이 수당이 지급되기 때문이다
+</p>
+	<img src="images/bear.jpeg"  />
+	<script>
+		document.querySelector("#showBtn").addEventListener("click",
+				function() {
+					document.querySelector("#one").style.display = "block";
+				});
+		document.querySelector("#hideBtn").addEventListener("click",
+				function() {
+					document.querySelector("#one").style.display = "none";
+				});
+	</script>
+
+</body>
+</html>

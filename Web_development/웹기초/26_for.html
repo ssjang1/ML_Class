@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+//함수적 프로그래밍 (for 문 생략)
+var isEven = function(x){
+	return (x%2)===0; // === 값을 비교 , == 주소를 비교
+}
+console.log([2,21,36].every(isEven)); // 함수를 매개변수로 요구하는 every
+console.log([1,22,35].some(isEven));
+
+var x=['a','b','c','d','e','f'];
+for (var entry of x.entries()){
+	console.dir(entry);
+}
+
+var numbers =[1,2,4,5,7,9,12];
+console.log(numbers.filter(isEven)); // 필터는 매개변수가 한개인 함수를 요구
+
+var x=['a','b','foo','d','e'];
+console.log(x.find(function(item){ //find index
+	return item.length>1;
+}));
+
+var x=['a','b','c'];
+x.forEach(function(item,index){
+	console.log('item at'+index+ ' = ' + item);
+});
+
+var x=[52,7,14,22,9];
+console.log(x);
+console.log(x.sort()); // 오름차순 , 오버로딩 , default 매개변수
+
+var numericComparison2=function(x,y){
+	return x-y;
+};
+console.log(x.sort(numericComparison2));
+
+var numericComparison=function(x,y){
+	return y-x;
+};
+console.log(x.sort(numericComparison));//내림차순 
+
+var numbers=[1,2,3,4];
+var squares=numbers.map(function(x){return x*x;}); //모든데이터에 대해서 연산을 시행할때 맵사용 
+</script>
+</head>
+<body>
+
+</body>
+</html>

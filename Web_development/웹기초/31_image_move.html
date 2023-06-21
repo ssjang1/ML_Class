@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<button onclick="move()">오른쪽으로</button>
+<button onclick="backmove()">왼쪽으로</button>
+<button onclick="upmove()">위로</button>
+<button onclick="downmove()">아래로</button>
+<button onclick="toGreen()">초록색으로</button>
+<button onclick="toggle()">색 바꾸기 </button>
+<img id="kim" width="500" border="10px"  src="images/bear.jpeg" alt="이미지 없음"/>
+<script>
+var color="green";
+var mLeft=0;
+var mUp=0;
+var move=function(){
+	mLeft+=10;
+	document.querySelector("#kim").style.marginLeft=mLeft+"px";
+};
+var backmove=function(){
+	mLeft-=10;
+	document.querySelector("#kim").style.marginLeft=mLeft+"px";
+};
+var upmove=function(){
+	mUp-=10;
+	document.querySelector("#kim").style.marginTop=mLeft+"px";
+};
+var downmove=function(){
+	mUp+=10;
+	document.querySelector("#kim").style.marginTop=mLeft+"px";
+};
+
+//문제 거꾸로 가는 버튼을 만들어보세요 
+
+//문제 border가 검정색인데 녹색으로 변화시키는 함수를 만들어보시오
+var toGreen=function(){
+	document.querySelector("#kim").style.borderColor="green";
+};
+//문제 한번누르면 그린 다시누르면 노랑으로 변화되는 버튼을 만들어보시오(toggle)
+var color="";
+var toggle=function(){
+	if (color==="green"){
+		color="yellow";
+	}
+	else {
+		color="green";
+	}
+	document.querySelector("#kim").style.borderColor=color;
+};
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+//document.write("<table>");
+//for(dan=1;dan<=9;dan++){
+//	document.write("<tr>");
+//	for(i=1;i<=9;i++)
+//		{
+//		document.write("<td>");
+//		document.write(dan+" * "+i+" = " + (dan*i));
+//		document.write("</td>");
+//		}
+//	document.write("</tr>");
+//}
+//document.write("</table>");
+
+//문제 
+//123
+//456
+//789 로 출력
+
+document.write("<table border=1 bordercolor='red'>");
+for(k=1;k<=9;k+=3){
+	for(i=1;i<=9;i++){
+		document.write("<tr>");
+		for(j=k;j<=k+2;j++){
+			document.write("<td>");
+			document.write(j+" X "+i+" = " + j*i +" ");
+			document.write("</td>");
+		}
+		document.write("</tr>");
+	}
+}
+document.write("</table>");
+
+//문제 
+document.write("<table border=2, bordercolor='blue'>");
+for(row=1;row<=20;row++){
+	document.write("<tr>");
+	for(col=1;col<=6;col++){
+		document.write("<td width=200 height=50 style='text-align:center;'>");
+		document.write(row+"행"+col+"열");
+		document.write("</td>");
+	}
+	document.write("</tr>");
+}
+document.write("</table>");
+
+
+</script>
+</body>
+</html>

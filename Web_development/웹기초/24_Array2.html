@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div>div1</div>
+	<div>div2</div>
+	<div id="monkey">div3</div>
+	<div>div4</div>
+	<div>div5</div>
+	<!-- onmouseover="change2()" -->
+	<button onclick="change()" onmouseout="recover()" >change!</button>
+
+	<script>
+		var names = [ "고구려", "희망이", "성취해", "원하는대로", "마음대로" ];
+		var recover = function() {
+			document.querySelectorAll("div")[0].innerText = "div1";
+			document.querySelectorAll("div")[1].innerText = "div2";
+			document.querySelectorAll("div")[2].innerText = "div3";
+			document.querySelectorAll("div")[3].innerText = "div4";
+			document.querySelectorAll("div")[4].innerText = "div5";
+		};
+		var change = function() { //querySelectorAll 리턴값이 배열 
+			// 대상이 여러개인 경우에는 배열로 리턴
+			// tag는 element = tag + content(text,number)
+			// get 함수와 query 함수
+			// getElementById() => id로 찾을때, getElementByName() =>이름으로 찾을때;
+			// querySelector() => 한개인 경우 querySelectorAll() =>여러개인경우 
+			document.querySelectorAll("div")[0].innerText = names[0]; //innerText는 content를 의미
+			document.querySelectorAll("div")[1].innerText = names[1];
+			document.querySelectorAll("div")[2].innerText = names[2];
+			document.querySelectorAll("div")[3].innerText = names[3];
+			document.querySelectorAll("div")[4].innerText = names[4];
+
+		};
+		var change2=function(){
+			document.getElementById("monkey").innerText = "<h1>이름으로 찾아서 바꿈</h1>";
+			alert(document.getElementById("monkey").innerHTML);
+			alert(document.getElementById("monkey").TextContent);
+		};
+	</script>
+</body>
+</html>

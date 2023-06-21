@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+.red-bold {
+	color: red;
+	font-weight: bold;
+}
+
+.box { /* 클래스이름: 자바클래스와는 의미가 다름 */
+	width: 100px;
+	height: 100px;
+	padding: 10px;
+	margin: 10px;
+	border-width: 10px;
+	border-style: solid;
+	border-color: red;
+}
+
+#myFriends { /* #+id */
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+</style>
+</head>
+<body>
+
+	<!-- div는 division의 약자 -->
+
+	<div class="box">div 요소는 문단을 나타낼 때 사용합니다.</div>
+	<div class="box">div 는 Block 요소입니다.</div>
+	<div class="box">세번째 문단</div>
+	<div class="box">
+		네번째 문단<span>단락</span>
+	</div>
+	<!-- span은 문단의 일부에 대해서만 효과줄 때 -->
+	<div class="box" id="myFriends">
+		span 요소는 인라인<span class="red-bold">요소</span>입니다.
+	</div>
+	<!-- 개별적으로 적용되는게 우선 id먼저,그다음 class -->
+</body>
+</html>
