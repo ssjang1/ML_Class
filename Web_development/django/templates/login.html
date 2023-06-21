@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+{%  block explain_contents %}>
+<div align="center">
+{% if form.errors %}
+<p> ID와 Password를 정확하게 입력하세요.</p>
+{% endif %}
+{% if next %}
+    {% if user.is_authenticated %}
+    <p>권한이 없으니 계정생성후 시도하세요.</p>
+    {% else %}
+    <p>로그인이 필요한 서비스입니다. .</p>
+    {% endif %}
+{% endif %}
+<form method="post" action="{% url 'login' %}">
+  {% csrf_token %}
+    <div>
+      <td>{{ form.username.label_tag }}</td><td>{{ form.username }}</td>
+    </div>
+    <div>
+      <td>{{ form.password.label_tag }}</td><td>{{ form.password }}</td>
+    </div>
+    <div>
+      <input type="submit" value="login" />
+      <input type="hidden" name="next" value="{{ next }}" />
+    </div>
+</form>
+</div>>
+{% endblock %}
